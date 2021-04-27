@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v7j-Qd-RRZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="50O-uS-9QO">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="567"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="92" id="Sps-cZ-x58" customClass="ProductCell" customModule="TestSample" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="375" height="92"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sps-cZ-x58" id="YJv-A8-czi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="92"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="WtW-7T-bjY">
+                                                            <rect key="frame" x="16" y="11" width="107" height="70"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Product name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M77-TR-v8v">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="107" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hox-aJ-M9A">
+                                                                    <rect key="frame" x="0.0" y="28.5" width="107" height="41.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X2q-rp-iRN">
+                                                            <rect key="frame" x="282" y="21" width="77" height="50"/>
+                                                            <accessibility key="accessibilityConfiguration" identifier="addToCartButton"/>
+                                                            <state key="normal" title="Add to cart"/>
+                                                            <connections>
+                                                                <action selector="addTap" destination="Sps-cZ-x58" eventType="touchUpInside" id="P3V-4f-3vd"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="WtW-7T-bjY" secondAttribute="bottom" id="3lH-GR-eYl"/>
+                                                        <constraint firstItem="WtW-7T-bjY" firstAttribute="leading" secondItem="YJv-A8-czi" secondAttribute="leadingMargin" id="FFi-Tq-tcC"/>
+                                                        <constraint firstAttribute="bottomMargin" secondItem="X2q-rp-iRN" secondAttribute="bottom" constant="10" id="H4T-US-C6G"/>
+                                                        <constraint firstItem="X2q-rp-iRN" firstAttribute="top" secondItem="YJv-A8-czi" secondAttribute="topMargin" constant="10" id="baC-u5-yOO"/>
+                                                        <constraint firstItem="WtW-7T-bjY" firstAttribute="top" secondItem="YJv-A8-czi" secondAttribute="topMargin" id="duR-rU-g9s"/>
+                                                        <constraint firstAttribute="trailingMargin" secondItem="X2q-rp-iRN" secondAttribute="trailing" id="iqe-Vm-jSP"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="nameLabel" destination="M77-TR-v8v" id="g4A-hm-ttt"/>
+                                                    <outlet property="priceLabel" destination="hox-aJ-M9A" id="Z9b-kt-KpM"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="BYZ-38-t0r" id="XdX-17-OHU"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mE-mJ-qz0">
+                                        <rect key="frame" x="0.0" y="567" width="375" height="100"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="htI-hU-fBI">
+                                                <rect key="frame" x="8" y="8" width="359" height="84"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jAi-dP-ike">
+                                                        <rect key="frame" x="0.0" y="0.0" width="275" height="84"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uI4-nw-yFs">
+                                                                <rect key="frame" x="0.0" y="0.0" width="275" height="20.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3t-ve-LsO">
+                                                                <rect key="frame" x="0.0" y="28.5" width="275" height="55.5"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P67-QC-Fj5">
+                                                        <rect key="frame" x="291" y="0.0" width="68" height="84"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="clearCartButton"/>
+                                                        <state key="normal" title="Clear cart"/>
+                                                        <connections>
+                                                            <action selector="clearCart" destination="BYZ-38-t0r" eventType="touchUpInside" id="twf-6j-LIS"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="htI-hU-fBI" secondAttribute="trailing" constant="8" id="JMn-8L-0BH"/>
+                                            <constraint firstAttribute="height" constant="100" id="RSa-Xl-myM"/>
+                                            <constraint firstItem="htI-hU-fBI" firstAttribute="top" secondItem="3mE-mJ-qz0" secondAttribute="top" constant="8" id="kmk-VX-c7O"/>
+                                            <constraint firstAttribute="bottom" secondItem="htI-hU-fBI" secondAttribute="bottom" constant="8" id="mB7-uq-t9z"/>
+                                            <constraint firstItem="htI-hU-fBI" firstAttribute="leading" secondItem="3mE-mJ-qz0" secondAttribute="leading" constant="8" id="xOj-LD-lxu"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="v7j-Qd-RRZ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="900-QS-hR0"/>
+                            <constraint firstItem="v7j-Qd-RRZ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GMw-VX-oeL"/>
+                            <constraint firstItem="v7j-Qd-RRZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ugo-TU-N87"/>
+                            <constraint firstItem="v7j-Qd-RRZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bZ0-Ah-8PF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cartDescriptionLabel" destination="S3t-ve-LsO" id="c4P-4K-cB4"/>
+                        <outlet property="cartView" destination="htI-hU-fBI" id="sF8-9P-mN5"/>
+                        <outlet property="tableView" destination="50O-uS-9QO" id="o8c-wg-NFO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.199999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
